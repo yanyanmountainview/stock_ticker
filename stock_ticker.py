@@ -7,6 +7,7 @@ from datetime import datetime as dt
 from datetime import timedelta
 
 app = dash.Dash()
+server = app.server
 
 app.layout = html.Div([
     html.H1('Stock Ticker Dashboard'),
@@ -65,4 +66,4 @@ def update_graph(n_clicks, stock_ticker, start_date, end_date):
     return fig
 
 if __name__ == '__main__':
-    app.run_server(debug = True)
+    app.run_server()
